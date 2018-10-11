@@ -1,0 +1,40 @@
+/*Style for new tweet panel*/
+
+.new-tweet {
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 1em 1em 1em 1em;
+  background-color: #eee;
+  border-radius: 25px;
+}
+
+.new-tweet h2{
+ margin-top: 0;
+}
+
+/* Add horizontal line below header 2*/
+.new-tweet h2:after{
+  content:' ';
+  width: 100%;
+  display:block;
+  border:0.5px solid black;
+}
+
+.new-tweet form textarea{
+  width: 100%;
+  border-color: lightgrey;
+  padding:0.5em;
+}
+
+.new-tweet form input{
+  border-color: lightgrey;
+  font-weight: lighter;
+  background-color: lightgrey;
+  border-color: grey;
+}
+
+.counter{
+  float: right;
+  font-weight: lighter;
+  font-style: italic;
+}

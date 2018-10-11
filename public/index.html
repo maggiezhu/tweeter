@@ -7,11 +7,20 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <!--external fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <!-- Nav Panel CSS-->
+    <link rel = "stylesheet" href="/styles/nav.css" type="text/css">
+    <!--new tweet panel CSS-->
+    <link rel = "stylesheet" href="/styles/new-tweet.css" type="text/css">
+    <link rel = 'stylesheet' href="/styles/tweetContainer.css" type="text/css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src = "scripts/composer-char-counter.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -21,12 +30,48 @@
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+      <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
     </nav>
 
     <!-- Page-specific (main) content here -->
+
     <main class="container">
+
+      <!--new Tweet panel-->
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method = POST action = '/tweets/'>
+          <textarea id = 'textarea' name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+
+      <!--tweet container, contains multiple tweets-->
+      <section class = 'tweetContainer'>
+        <article>
+          <!--each tweet is an article-->
+          <header>
+            <img src="/images/bird.png">
+            <span class ='username'>UserName</span>
+            <span class='useraccount'>@useraccount</span>
+          </header>
+          <p>This is the tweet content</p>
+          <hr/>
+          <footer>
+            <span>1 second ago</span>
+            <svg class='icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path style="fill:#00a087;" d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/></svg>
+            <svg class='icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path style="fill:#00a087;" d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+            <svg class='icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path style="fill:#00a087;" d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
+            </div>
+          </footer>
+
+        </article>
+      </section>
+
+
+
     </main>
 
   </body>

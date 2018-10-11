@@ -1,0 +1,105 @@
+.tweetContainer {
+  margin:2em 2em 2em 2em;
+
+
+
+
+
+}
+.tweetContainer article{
+ border-color: lightgrey;
+ border-width: 0.5px;
+ border-style: solid;
+ border-radius: 10px;
+ padding:1px;
+
+}
+.tweetContainer article header{
+  background-color: #eee;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.tweetContainer article header img{
+  margin:0.5em 0.5em 0.5em 0.5em;
+  border-radius: 25px;
+  height:60px;
+  width: 60px;
+  float: left;
+}
+.tweetContainer article p{
+  padding-left: 5px;
+}
+
+.username{
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-size: 2em;
+  color:grey;
+}
+.tweetContainer .useraccount{
+    font-size: 1.5em
+    display: inline-block;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: grey;
+    float:right;
+
+  }
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0em 0;
+    padding: 0;
+}
+.tweetContainer article footer{
+  height: 25px;
+}
+.tweetContainer article footer span{
+  padding-top:5px;
+  padding-bottom: 5px;
+  padding-left:5px;
+  color: grey;
+  font-size: small;
+  float:left;
+}
+.icon{
+  padding-right: 5px;
+  display: inline;
+  float:right;
+  padding-left: 5px;
+  visibility: hidden;
+}
+
+/*
+Add Hover State Changes
+*/
+
+article:hover {
+  border-color: grey;
+}
+
+article:hover .username{
+  color:black;
+}
+article:hover .icon{
+  visibility: visible;
+}
+article:hover .useraccount{
+  color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
