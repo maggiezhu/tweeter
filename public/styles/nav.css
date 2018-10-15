@@ -25,3 +25,39 @@
   padding-left:10px;
   line-height: 80px;
 }
+
+.composeButton{
+  float:right;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  background-color: #F0FFFF;
+    border: solid;
+    padding: 15px 30px 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+    font-size: 20px;
+    border: 2px solid black;
+    color: #20B2AA;
+}
+
+.composeButton:focus {
+  background-color: white;
+  color:black;
+}
+
+#emptyError{
+  display:none;
+  color: red;
+}
+#exceedLimit{
+  display:none;
+  color: red;
+}
+
+
+
+
+

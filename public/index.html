@@ -24,6 +24,12 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+
+
+
+
+
   </head>
 
   <body>
@@ -32,26 +38,25 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <button class = 'composeButton'>Compose</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
 
     <main class="container">
-
       <!--new Tweet panel-->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method = POST action = '/tweets/'>
+        <form id = 'submitForm' method = POST action = '/tweets/'>
           <textarea id = 'textarea' name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+          <p id = 'emptyError'>Cannot submit an empty tweet!</p>
+          <p id = 'exceedLimit'> Tweet exceeds 140 words!</p>
+          <input  type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
 
-      <!--tweet container, contains multiple tweets-->
-      <section class = 'tweetContainer'>
-        <article>
-          <!--each tweet is an article-->
+      <article class='hidden' id = 'template'>
           <header>
             <img src="/images/bird.png">
             <span class ='username'>UserName</span>
@@ -66,9 +71,12 @@
             <svg class='icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path style="fill:#00a087;" d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
             </div>
           </footer>
-
         </article>
+      <!--tweet container, contains multiple tweets-->
+      <section class = 'tweetContainer'>
+
       </section>
+      <!--a hidden article template to be append to tweetContainer-->
 
 
 

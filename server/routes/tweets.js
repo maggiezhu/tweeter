@@ -17,6 +17,7 @@ module.exports = function(DataHelpers) {
     });
   });
 
+
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
@@ -24,6 +25,7 @@ module.exports = function(DataHelpers) {
     }
 
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
+
     const tweet = {
       user: user,
       content: {
@@ -36,9 +38,13 @@ module.exports = function(DataHelpers) {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
-        res.status(201).send();
+        res.status(201).json(tweet).send();
+
       }
+
+
     });
+
   });
 
   return tweetsRoutes;

@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   $('textarea').on('keyup',function(event){
     var charleft = 140-$(this).val().length;
-    console.log(charleft);
+
     $(this).siblings('span').text(charleft);
     if(charleft<0){
       $(this).siblings('span').css('color','red');
