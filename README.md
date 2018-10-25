@@ -18,3 +18,8 @@ This repository is the starter code for the project: built using HTML, CSS, JS, 
 - chance
 - mongoDB
 - body-parser
+
+## Screenshots
+!['Screenshot of tweet compose box'](https://github.com/maggiezhu/tweeter/blob/master/compose_tweet.png)
+
+!['Screenshot of example tweets'](https://github.com/maggiezhu/tweeter/blob/master/Tweet_Example.png)
