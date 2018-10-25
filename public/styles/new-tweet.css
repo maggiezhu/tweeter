@@ -44,3 +44,6 @@
 .hidden {
   display:none;
 }
+#textbox{
+  width : 380px;
+}
